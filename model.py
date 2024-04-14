@@ -5,6 +5,8 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Normalization
 from tensorflow.keras.losses import BinaryCrossentropy
 
+tf.random.set_seed(1234)
+
 # Load data
 data = pd.read_csv('coffee_data.csv')
 X = data[['Temperature', 'Duration']].values
@@ -31,5 +33,5 @@ X_tiled = np.tile(X, (1000, 1))
 Y_tiled = np.tile(Y, (1000, 1))
 
 
-model.fit(X_tiled, Y_tiled, epochs=100)
+model.fit(X_tiled, Y_tiled, epochs=10)
 model.save('coffee_roasting_model.keras')
