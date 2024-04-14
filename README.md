@@ -1,5 +1,5 @@
 # Coffee Roasting
-Super basic neural network model built using logistic regression.
+Super basic neural network model built using logistic regression and TensorFlow.
 
 # Inputs
 - Duration(minutes)
