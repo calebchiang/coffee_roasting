@@ -10,7 +10,6 @@ def main():
     x2 = float(input("Enter a duration (minutes): "))
 
     x_new = np.array([[x1, x2]])
-    norm_input = model.layers[0](x_new)
     y_pred = model.predict(x_new)
     print(y_pred)
     if y_pred >= 0.5:
